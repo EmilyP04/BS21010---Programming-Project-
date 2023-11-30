@@ -1,0 +1,59 @@
+#Initials included for reference to who wrote specific sections of the code throughout script
+#SI =  Soumya Iyer (2510028)
+#SP = Sophie Perry (2498172)
+#EP = Emily Paterson (2511333)
+
+#tkinter is the library used to create a graphical user interface for the quiz
+
+import tkinter as tk
+
+from tkinter import ttk
+
+from tkinter import *
+
+import tkinter.font as font
+
+
+class App(tk.Tk):
+  '''class that holds all of the code for the app together'''  
+
+  def __init__(self):
+#initializes the classes attribute of self  in order to  have a way to link the rest of the code to the class      
+      super().__init__()
+      self.button_states = {}
+# root
+
+      self.geometry('1300x800')
+      self.title('Christmas Quiz!!!')
+      self.widgets = {}
+
+#assigns geom​​etry and a title to the app  
+
+      self.notebook = ttk.Notebook(self)
+      self.notebook.pack(pady=10, expand=True)
+
+# creates a notebook and assigns it to the class (SP)(Adapted from https://www.pythontutorial.net/tkinter/tkinter-notebook/)
+
+      self.frame1 = Frame(self.notebook, width=1300, height=680)
+      self.frame2 = Frame(self.notebook, width=1300, height=680, bg='#F08080')
+      self.frame3 = Frame(self.notebook, width=1300, height=680, bg='#9BCD9B')
+      self.frame4 = Frame(self.notebook, width=1300, height=680, bg='#F08080')
+      self.frame5 = Frame(self.notebook, width=1300, height=680, bg='#9BCD9B')
+      self.frame6 = Frame(self.notebook, width=1300, height=680, bg='#F08080')
+      self.frame7 = Frame(self.notebook, width=1300, height=680, bg='#9BCD9B')
+      self.frame8 = Frame(self.notebook, width=1300, height=680, bg='#F08080')
+      self.frame9 = Frame(self.notebook, width=1300, height=680, bg='#9BCD9B')
+
+# creates frames and links them to the notebook (SP)
+
+      self.notebook.add(self.frame1, text='Welcome to the Quiz')
+      self.notebook.add(self.frame2, text='Question 1')
+      self.notebook.add(self.frame3, text='Question 2')
+      self.notebook.add(self.frame4, text='Question 3')
+      self.notebook.add(self.frame5, text='Question 4')
+      self.notebook.add(self.frame6, text='Question 5')
+      self.notebook.add(self.frame7, text='Question 6')
+      self.notebook.add(self.frame8, text='Question 7')
+      self.notebook.add(self.frame9, text='Question 8')
+     
+# adds the frames to notebook and the text that appears on each tab to click between the frames (SP)
