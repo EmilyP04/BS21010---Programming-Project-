@@ -1,0 +1,98 @@
+      def final(total):
+
+          print("Sum of all the elements in the list is:", sum(finaltotal)) #allows user to keep track and check if their answers are correct (SI)
+
+
+          answer=sum(finaltotal) #uses the sum function to add up all the numerical values gathered in the list through buttons (SI)
+
+          if 8<=answer<=12: #use of conditionals to check if the answers match the following character(SI)
+
+             self.frame10 = Frame(self.notebook, width=1300, height=800, bg='#9BCD9B') #creation of new frame based on whether the condition is satisfied
+             self.notebook.add(self.frame10, text='Your Character') #Adds new frame to the notebook and the label of the tab
+             self.label = Label(self.frame10, text='You are the Grinch!',bg='#9BCD9B')
+             self.label.config(font=('Segoe script',25,'bold'))
+             self.label.pack()
+             self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Second Year\programming\final grinch.png") # an image is uploaded to the GIT repositry to be dowloaded by the user for use (EP)
+
+             self.canvas1 = Canvas(self.frame10, width = 1100,height = 700) # dimensions were set to ensure that the image fit and was displayed in the correct place, this copied for the following images (EP)
+             self.canvas1.pack(fill = "none", expand = True)
+             self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
+
+          elif 13<=answer<=16:  #use of conditionals to check if the answers match the following character
+
+              self.frame11 = Frame(self.notebook, width=1300, height=800, bg='#9BCD9B') #creation of new frame based on whether the condition is satisfied
+              self.notebook.add(self.frame11, text='Your Character') #Adds new frame to the notebook and the label of the tab
+              self.label = Label(self.frame11, text='You are Rudolph!',bg='#9BCD9B')  
+              self.label.config(font=('Segoe script',25,'bold'))
+              self.label.pack()
+              self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Second Year\programming\final rudy.png")
+
+              self.canvas1 = Canvas(self.frame11, width = 1100,height = 700)
+              self.canvas1.pack( fill = "none", expand = False)
+              self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
+
+           
+          elif 17<=answer<=20:  #use of conditionals to check if the answers match the following character
+
+               self.frame12 = Frame(self.notebook, width=1300, height=800, bg='#9BCD9B') #creation of new frame based on whether the condition is satisfied
+               self.notebook.add(self.frame12, text='Your Character') #Adds new frame to the notebook and the label of the tab
+               self.label = Label(self.frame12, text='You are Santa!',bg='#9BCD9B')
+               self.label.config(font=('Segoe script',25,'bold'))
+               self.label.pack()
+               self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Second Year\programming\final santa.png")
+
+               self.canvas1 = Canvas(self.frame12, width = 1100,height = 700)
+               self.canvas1.pack(fill = "none", expand = False)
+               self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
+
+
+          elif 21<=answer<=24:  #use of conditionals to check if the answers match the following character
+
+              self.frame13 = Frame(self.notebook, width=1300, height=800, bg='#9BCD9B')  #creation of new frame based on whether the condition is satisfied
+              self.notebook.add(self.frame13, text='Your Character') #Adds new frame to the notebook and the label of the tab
+              self.label = Label(self.frame13, text='You are Buddy the Elf!',bg='#9BCD9B')
+              self.label.config(font=('Segoe script',25,'bold'))
+              self.label.pack()
+              self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Second Year\programming\final buddy.png")
+
+              self.canvas1 = Canvas(self.frame13, width = 1100,height = 700)
+              self.canvas1.pack(fill = "none", expand = True)
+              self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
+
+           
+          elif 25<=answer<=28:  #use of conditionals to check if the answers match the following character
+
+
+              self.frame14 = Frame(self.notebook, width=1300, height=800, bg='#9BCD9B')  #creation of new frame based on whether the condition is satisfied
+              self.notebook.add(self.frame14, text='Your Character') #Adds new frame to the notebook and the label of the tab
+              self.label = Label(self.frame14, text='You are Kevin McAllistar!',bg='#9BCD9B')
+              self.label.config(font=('Segoe script',25,'bold'))
+              self.label.pack()
+              self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Second Year\programming\final kevin.png")
+
+              self.canvas1 = Canvas(self.frame14, width = 1100,height = 700)
+              self.canvas1.pack(fill = "none", expand = True)
+              self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
+
+
+          elif 29<=answer<=32:  #use of conditionals to check if the answers match the following character
+
+             self.frame15 = Frame(self.notebook, width=1300, height=700, bg='#9BCD9B')  #creation of new frame based on whether the condition is satisfied
+             self.notebook.add(self.frame15, text='Your Character') #Adds new frame to the notebook and the label of the tab
+             self.label = Label(self.frame15, text='You are Cindy Loo Hoo!',bg='#9BCD9B')
+             self.label.config(font=('Segoe script',25,'bold'))
+             self.label.pack()
+             self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Second Year\programming\final cindy.png")
+
+             self.canvas1 = Canvas(self.frame15, width = 1100,height = 700)
+             self.canvas1.pack(fill = "none", expand = True)
+             self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
+
+          elif answer<8:
+             self.frame16 = Frame(self.notebook, width=1300, height=700, bg='#9BCD9B')  #creation of new frame based on whether the condition is satisfied
+             self.notebook.add(self.frame16, text=':(') #Adds new frame to the notebook and the label of the tab
+             self.label = Label(self.frame16, text='You did not complete the quiz!:(',bg='#9BCD9B')
+             self.label.config(font=('Segoe script',25,'bold'))
+             self.label.pack()
+           
+             print('YOU DID NOT COMPLETE THE QUIZ :(')  # prints is final total is lower than first conditionals set
