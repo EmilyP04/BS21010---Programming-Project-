@@ -1,0 +1,468 @@
+      f = font.Font(family='impact', size=20) #creating a standardised font style to use throughout the function (SI)
+      S = font.Font(family='times new roman', size=15)
+
+ 
+      finaltotal=[] #using a list to track the answers to get a sum that helps reveal the final answer/character of the quiz (SI)
+
+      total=0
+
+#function(SI)
+      def season(value):
+         
+          '''function where the chosen button(season) is assigned a numerical value to allow addition through the use of abovementioned list'''
+       
+          if value == 'summer':
+            total=1
+          elif value == 'autumn':
+             total =2
+          elif value == 'spring':
+             total=3
+          elif value== 'winter':
+             total=4
+          else:
+            total=0
+
+          v=total
+
+   
+
+          finaltotal.append(v)
+   
+
+  #Answer options in the form of button widgets assigned to the right frame of the notebook (SP) (adapted from exampleApp.py) , this same concept is continued for the rest of the questions and buttons throughout the rest of the code
+
+      self.widgets['MyButton'] = Button(self.frame2, text='Summer', bg='#EEAEEE', height=3, width=14, command=lambda:season('summer')) #use of lambda function to assign specfic value from the function to the button choice (SI)
+      self.widgets['MyButton']['font']= f #custom font style that is initialised above (SI)
+      self.widgets['MyButton'].pack(padx=10,pady=10) #helps with the spacing of the buttons (SI)
+
+ # these stylistic techniques are applied for all the buttons and are consistent throughout the code (SI)
+
+      self.widgets['MyButton'] = Button(self.frame2, text='Autumn', bg='#FF4040', height=3, width=14, command=lambda:season('autumn'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame2, text='Spring', bg='#8EE5EE',height=3, width=14, command=lambda:season('spring'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] =Button(self.frame2, text='Winter', bg='#FFD700', height=3, width=14,command=lambda:season('winter') )
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+#Question 2
+
+      self.label = Label(self.frame3, text='What is your favourite Christmas food?' ,bg='#9BCD9B')
+      self.label.config(font=('times new roman',25)) #config allows for improving the appearance of the app
+      self.label.pack()
+
+ 
+      finaltotal=[]
+
+      total=0
+ 
+
+ 
+#function(SI)
+      def food(value):
+          '''function where the chosen button(food) is assigned a numerical value to allow addition through the use of abovementioned list'''
+
+          if value == 'brussel sprouts':
+
+              total=1
+
+          elif value == 'yule log':
+
+              total =2
+
+          elif value=='turkey':
+
+              total=3
+
+          elif value == 'roast potatoes':
+
+              total=4
+
+          else:
+              total=0
+          v=total
+
+          finaltotal.append(v)
+
+
+      self.widgets['MyButton'] = Button(self.frame3, text='Brussel sprouts', bg='#FFD700', height=3, width=14, command=lambda:food('brussel sprouts'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+ 
+
+
+      self.widgets['MyButton'] = Button(self.frame3, text='Turkey', bg='#8EE5EE',height=3, width=14, command=lambda:food('turkey'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame3, text='Yule log',bg='#FF4040', height=3, width=14, command=lambda:food('yule log'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame3, text='Roast potatoes',bg='#EEAEEE', height=3, width=14,command=lambda:food('roast potatoes'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+#Question 3
+      self.label = Label(self.frame4, text='What is your favourite Amino Acid?', bg='#F08080')
+      self.label.config(font=('times new roman',25))
+      self.label.pack()
+
+
+      finaltotal=[]
+
+      total=0
+
+#function(SI)
+      def amino(value):
+
+          '''function where the chosen button(amino acid) is assigned a numerical value to allow addition through the use of abovementioned list'''
+         
+          if value == 'glutamate':
+
+            total=1
+
+          elif value == 'leucine':
+
+            total =2
+
+          elif value=='histidine':
+
+            total=3
+
+          elif value == 'glutamine':
+
+            total=4
+
+          else:
+
+            total=0
+
+
+          v=total
+          finaltotal.append(v)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame4, text='Glutamate', bg='#8EE5EE',height=3, width=14, command=lambda:amino('glutamate'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame4, text='Leucine',bg='#FF4040', height=3, width=14, command=lambda:amino('leucine'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame4, text='Histidine',bg='#EEAEEE', height=3, width=14, command=lambda:amino('histidine'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame4, text='Glutamine', bg='#FFD700', height=3, width=14, command=lambda:amino('glutamine'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+#Question 4
+      self.label = Label(self.frame5, text='Who is your favourite artist?' ,bg='#9BCD9B')
+      self.label.config(font=('times new roman',25))
+      self.label.pack()
+
+ 
+      finaltotal=[]
+      total=0
+
+
+#function(SI)
+      def artist(value):
+         
+          '''function where the chosen button(musician) is assigned a numerical value to allow addition through the use of abovementioned list'''
+         
+          if value == 'frank sinatra':
+
+             total= 1
+
+          elif value == 'michael buble':
+
+             total = 2
+
+          elif value == 'sia':
+
+             total=3
+
+          elif value == 'ariana grande':
+
+             total=4
+
+          else:
+
+             total=0
+
+          v=total
+
+          finaltotal.append(v)
+
+     
+
+
+      self.widgets['MyButton'] = Button(self.frame5, text='Frank sinatra',bg='#FF4040', height=3, width=14,command=lambda:artist('frank sinatra'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame5, text='Michael buble',bg='#EEAEEE', height=3, width=14,command=lambda:artist('michael buble'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame5, text='Sia', bg='#FFD700', height=3, width=14, command=lambda:artist('sia'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+   
+
+      self.widgets['MyButton'] = Button(self.frame5, text='Ariana grande', bg='#8EE5EE',height=3, width=14,command=lambda:artist('ariana grande'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+#Question 5
+      self.label = Label(self.frame6, text='What is your favourite Christmas film?', bg='#F08080')
+      self.label.config(font=('times new roman',25))
+      self.label.pack()
+
+ 
+
+      finaltotal=[]
+
+      total=0
+
+#function(SI)
+      def film(value):
+         
+          '''function where the chosen button(christmas movie) is assigned a numerical value to allow addition through the use of abovementioned list'''
+ 
+          if value == 'Elf':
+
+              total=1
+
+          elif value == 'home alone':
+
+               total = 2
+
+          elif value == 'nativity':
+
+              total=3
+
+          elif value =='the grinch':
+
+               total=4
+
+          else:
+
+               total=0
+
+     
+      v=total
+      finaltotal.append(v)
+
+
+      self.widgets['MyButton'] = Button(self.frame6, text='Elf',bg='#EEAEEE', height=3, width=14,command=lambda:film('Elf'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame6, text='Home alone', bg='#FFD700', height=3, width=14,command=lambda:film('home alone'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+
+
+      self.widgets['MyButton'] = Button(self.frame6, text='Nativity', bg='#8EE5EE',height=3, width=14,command=lambda:film('nativity'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+ 
+      self.widgets['MyButton'] = Button(self.frame6, text='The grinch',bg='#FF4040', height=3, width=14,command=lambda:film('the grinch'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+#Question 6
+      self.label = Label(self.frame7, text='What is your favourite coding language?' ,bg='#9BCD9B')
+      self.label.config(font=('times new roman',25))
+      self.label.pack()
+
+ 
+      finaltotal=[]
+
+      total=0
+
+#function(SI)
+      def lang(value):
+         
+          '''function where the chosen button(programming language) is assigned a numerical value to allow addition through the use of abovementioned list'''
+
+          if value == 'C--':
+
+             total= 1
+
+          elif value == 'R studio':
+
+             total = 2
+
+          elif value == 'python':
+
+             total=3
+
+          elif value == 'C++':
+
+             total=4
+
+          else:
+             total=0
+
+          v=total
+          finaltotal.append(v)
+
+   
+      self.widgets['MyButton'] = Button(self.frame7, text='C--', bg='#FFD700', height=3, width=14,command=lambda:lang('C--'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame7, text='R studio', bg='#8EE5EE',height=3, width=14,command=lambda:lang('R studio'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame7, text='Python',bg='#FF4040', height=3, width=14,command=lambda:lang('python'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame7, text='C++',bg='#EEAEEE', height=3, width=14,command=lambda:lang('C++'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+#Question 7
+      self.label = Label(self.frame8, text='Which of these gifts would you give someone for Christmas?', bg='#F08080')
+      self.label.config(font=('times new roman',25))
+      self.label.pack()
+
+ 
+      finaltotal=[]
+
+      total=0
+
+#function(SI)
+      def gift(value):
+         
+          '''function where the chosen button(gift choice) is assigned a numerical value to allow addition through the use of abovementioned list'''
+       
+          if value == 'coal':
+            total= 1
+          elif value == 'toys':
+             total = 2
+          elif value== 'candles':
+             total= 3
+          elif value == 'socks':
+
+             total= 4
+          else:
+            total=0
+
+   
+          v=total
+
+
+          finaltotal.append(v)
+
+      self.widgets['MyButton'] = Button(self.frame8, text='Toys', bg='#8EE5EE',height=3, width=14,command=lambda:gift('toys'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+
+      self.widgets['MyButton'] = Button(self.frame8, text='Coal',bg='#FF4040', height=3, width=14,command=lambda:gift('coal'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+
+      self.widgets['MyButton'] = Button(self.frame8, text='Candles',bg='#EEAEEE', height=3, width=14,command=lambda:gift('candles'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+      self.widgets['MyButton'] = Button(self.frame8, text='Socks', bg='#FFD700', height=3, width=14,command=lambda:gift('socks'))
+      self.widgets['MyButton']['font']= f
+      self.widgets['MyButton'].pack(padx=10,pady=10)
+
+ 
+
+#Question 8
+      self.label = Label(self.frame9, text='What is your favourite part of Christmas?',bg='#9BCD9B')
+      self.label.config(font=('times new roman',25))
+      self.label.pack()
+
+ 
+
+
+      finaltotal=[]
+      total=0
+     
+#function(SI)
+      def fav(value):
+         
+         '''function where the chosen button(favourite thing about christmas) is assigned a numerical value to allow addition through the use of abovementioned list'''
+
+         if value == 'movies':
+          total=1
+
+         elif value == 'family':
+           total = 2
+
+         elif value == 'food':
+
+          total= 3
+
+         elif value == 'gifts':
+
+          total =4
+
+         else:
+
+              total=0
+
+         v=total
+
+         finaltotal.append(v)
