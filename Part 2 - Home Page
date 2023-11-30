@@ -1,0 +1,38 @@
+# Creating and styling the home page
+
+      self.label = ttk.Label(self.frame1, text='What Christmas Character Are you?')
+
+      self.label.config(font=('times new roman',25))
+
+      self.label.pack()
+
+# adds a label to the first frame (SP), This same concept of adding a label is carried out through the rest of the code
+ 
+      self.label = Label(self.frame1, text='Go to Question 1 ^', bg='#FF0000')
+
+      self.label.config(font=('times new roman',15))
+
+ 
+
+      self.label.pack()
+     
+#Code used for displaying all images was adapted from (https://www.geeksforgeeks.org/how-to-use-images-as-backgrounds-in-tkinter/) (EP)
+      self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Desktop\chris-pic.png")   # an image is uploaded to the GIT repositry to be dowloaded by the user for use,  this image is set as the background of the welcome page (EP)
+
+
+      self.canvas1 = Canvas(self.frame1, width = 1200,height = 631)  # width and height control the images dimensions, these values were chosen ensure that the image fit the app window correctly (EP)
+
+ 
+      self.canvas1.pack(fill = "both", expand = True) # fill and expand allow the image to fit the app window, this shown by the commands of true and both (EP)
+
+
+ #displays the image
+
+      self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
+
+ 
+      self.label = ttk.Label(self.frame1, text='To play this quiz, click the button of your answer to the question and then move on to the next question by clicking the tabs at the top')
+
+      self.label.config(font=('times new roman',15))
+
+      self.label.pack()
