@@ -81,10 +81,7 @@ class App(tk.Tk):
 
       self.label.pack()
      
-#Code used for displaying all images was adapted from (https://www.geeksforgeeks.org/how-to-use-images-as-backgrounds-in-tkinter/) (EP)
-     
 
- #displays the image
 
  #Code used for displaying all images was adapted from (https://www.geeksforgeeks.org/how-to-use-images-as-backgrounds-in-tkinter/) (EP)
       self.bg = PhotoImage(file = r"C:\Users\2498172\OneDrive - University of Dundee\Desktop\chris-pic.png")   # an image is uploaded to the GIT repositry to be dowloaded by the user for use,  this image is set as the background of the welcome page (EP)
