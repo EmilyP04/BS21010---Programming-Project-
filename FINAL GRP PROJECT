@@ -97,7 +97,7 @@ class App(tk.Tk):
       self.canvas1.create_image( 0, 0, image = self.bg,anchor = "nw")
 
 
-      self.label = ttk.Label(self.frame1, text='To play this quiz, click the button of your answer to the question and then move on to the next question by clicking the tabs at the top')
+      self.label = ttk.Label(self.frame1, text='To play this quiz, click the button of your answer to the question and press submit when finished!')
       self.label.config(font=('times new roman',15))
       self.label.pack()
      
